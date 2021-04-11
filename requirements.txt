@@ -2,4 +2,4 @@ streamlit==0.79.0
 pandas
 numpy==1.18.5
 keras
-tensorflow==2.0.0b1
+tensorflow==2.0.0
