@@ -1,6 +1,6 @@
 # %%writefile app.py
 
-import keras
+from tensorflow.keras.models import load_model  
 import streamlit as st 
 import numpy as np
 import pandas as pd
@@ -17,7 +17,7 @@ output_df_Thrust_control = None
 
 def teachable_machine_classification(df, weights_file):
      # Load the model
-    model = keras.models.load_model(weights_file)
+    model = load_model(weights_file)
     test = model.predict(df)
     test = np.array(test)
     test_df = pd.DataFrame(test)
