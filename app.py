@@ -26,7 +26,7 @@ def teachable_machine_classification(df, weights_file):
 
 def main():
     
-    page = st.sidebar.selectbox("Choose Satellite Navigation Systems", ['Home page' , 'Telemetry Electronics', 'Steering Control' ,'Thrust control','output From All Navigation Systems'])
+    page = st.sidebar.selectbox("Choose Satellite Navigation Systems", ['Home page' , 'Telemetry Electronics', 'Steering Control' ,'Thrust control'])
 
     if page == 'Home page': 
         
@@ -42,9 +42,9 @@ def main():
 
     elif page == 'Thrust control':
         Thrust_control()
-
-    else:
-        output_From_All_Navigation_Systems()
+     else:
+        pass
+  
 
 
 
@@ -132,11 +132,7 @@ def Telemetry_Electronics():
                 b64 = base64.b64encode(csv.encode()).decode()  # some strings
                 linko= f'<a href="data:file/csv;base64,{b64}" download="output.csv">Download output file</a>'
                 st.markdown(linko, unsafe_allow_html=True)
-# def print_output_fist_stage():
-#     csv = output_df_Telemetry_Electronics.to_csv(index=False)
-#     b64 = base64.b64encode(csv.encode()).decode()  # some strings
-#     linko= f'<a href="data:file/csv;base64,{b64}" download="output.csv">Download output file</a>'
-#     st.markdown(linko, unsafe_allow_html=True)
+
 
 def Steering_Control():  
     st.markdown("<h1 style='text-align: center; color: black;'> Steering Control </h1>", unsafe_allow_html=True)
@@ -277,24 +273,6 @@ def Thrust_control():
                 linko= f'<a href="data:file/csv;base64,{b64}" download="output.csv">Download output file</a>'
                 st.markdown(linko, unsafe_allow_html=True)
 
-
-def output_From_All_Navigation_Systems():
-    st.title("output From All Navigation Systems")
-    st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://th.bing.com/th/id/R3c363a11aecebd7e76f18f23f81e5c2e?rik=xBXL%2bdFNrjtLSA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fCy7YPNg.jpg&ehk=QtoG1zotzCDq%2beIQ7SHA6xKvIQZaZGm13fK7HoOLxXA%3d&risl=&pid=ImgRaw")
-    }
-
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
-    download_output1 = st.button("download output1 ")    
-    download_output2 = st.button("download output2 ")  
-    download_output3 = st.button("download output3 ")
-    
     
 
 
