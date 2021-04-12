@@ -10,9 +10,6 @@ first_model = "first_model.h5"
 second_model = "second_model.h5"
 final_model = "final_model.h5"
 
-output_df_Telemetry_Electronics = None
-output_df_Steering_Control = None
-output_df_Thrust_control = None
 
 
 def teachable_machine_classification(df, weights_file):
@@ -40,10 +37,9 @@ def main():
         Steering_Control()
 
 
-    elif page == 'Thrust control':
+    else:
         Thrust_control()
-     else:
-        pass
+   
   
 
 
