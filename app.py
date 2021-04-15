@@ -214,7 +214,7 @@ def Thrust_control():
     left_column , middle_column , right_column = st.beta_columns(3)
     # You can use a column just like st.sidebar:
 
-    left_column.button('choose Robot number' , key = 101)
+    left_column.button('Choose Robot Name' , key = 101)
 
     # Or even better, call Streamlit functions inside a "with" block:
     with left_column:
