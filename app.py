@@ -5,13 +5,9 @@ import numpy as np
 import pandas as pd
 import base64
 
-# first_model = "first_model.h5"
-# second_model = "second_model.h5"
-# final_model = "final_model.h5"
-
-first_model = ""
-second_model = ""
-final_model = ""
+first_model = "first_model.h5"
+second_model = "second_model.h5"
+final_model = "final_model.h5"
 
 
 
